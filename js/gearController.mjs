@@ -1,3 +1,5 @@
+import BigNumber from "../libraries/bignumber.mjs"
+
 export var gears = {
 	progress: [new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0')],
 	max: [new BigNumber('30.0'), new BigNumber('4.0'), new BigNumber('6.0'), new BigNumber('8.0'), new BigNumber('12.0')],
