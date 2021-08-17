@@ -1,5 +1,3 @@
-import "../libraries/bignumber"
-
 function updateVisual()
 {
 	switch(globalDisplays.currentScreen)
