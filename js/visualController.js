@@ -18,4 +18,6 @@ function updateVisual()
 		}*/
 		break;
 	}
+
+    document.getElementById("buildNumber").innerHTML = metaData.build
 }

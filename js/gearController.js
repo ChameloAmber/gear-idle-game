@@ -10,11 +10,13 @@ var gears = {
 function gearGeneration() 
 {
     gears.progress[0] += (gears.progressPerMinuteBase * gears.progressPerMinuteMultiplier) / (60 * globalConstant.gameTicksPerSecond)
+    var totalRatio = 0
     for(i = 0; i < 5; i++)
     {
         if(i != 0 && gears.state[i] == 1)
         {
             gears.progress[i] += (gears.progressPerMinuteBase * gears.progressPerMinuteMultiplier) / (60 * globalConstant.gameTicksPerSecond * gears[i].max)
+            totalRatio += gears[i].max
         }
         if(gears[i].progress >= gears[i].max)
         {
