@@ -3,7 +3,7 @@ import { globalConstant } from "./mainScript.mjs";
 
 export var gears = {
 	progress: [new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0')],
-	ratio: [new BigNumber('30.0'), new BigNumber('4.0'), new BigNumber('6.0'), new BigNumber('8.0'), new BigNumber('12.0')],
+	ratio: [new BigNumber('60.0'), new BigNumber('4.0'), new BigNumber('6.0'), new BigNumber('8.0'), new BigNumber('12.0')],
 	state: [1, 0, 0, 0, 0],
     energy: [new BigNumber('0'), new BigNumber('0'), new BigNumber('0'), new BigNumber('0'), new BigNumber('0')],
 	progressPerMinuteBase: new BigNumber('60.0'),
