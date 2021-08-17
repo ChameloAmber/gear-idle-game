@@ -2,20 +2,21 @@ function updateVisual()
 {
 	switch(globalDisplays.currentScreen)
 	{
-		case 0: document.getElementById("gear1Number").innerHTML = Math.floor(gears.progress[0]);	
-		document.getElementById("gear1Max").innerHTML = "Max " + gears.max[0];
-		document.getElementById("gear1Progress").style.width = (gears.progress[0] / gears.max[0] * 100) + "%";
-		/*for(i = 1; i < 16; i++)
+		case 0: 
+		for(i = 0; i < 5; i++)
 		{
 			if(gears.state[i] == 1)
 			{
-				document.getElementById("gear" + (i+2)).style.display = "block";
+                document.getElementById("gear" + (i+1) + "Number").innerHTML = Math.floor(gears.progress[i])
+                document.getElementById("gear" + (i+1) + "Max").innerHTML = Math.floor(gears.progress[i])
+                document.getElementById("gear" + (i+1) + "Progress").style.width = (gears.progress[i] / gears.max[i] * 100) + "%";
+				document.getElementById("gear" + (i+1) + "Box").style.display = "block";
 			}
 			else
 			{
-				document.getElementById("gear" + (i+2)).style.display = "none";
+				document.getElementById("gear" + (i+1) + "Box").style.display = "none";
 			}
-		}*/
+		}
 		break;
 	}
 

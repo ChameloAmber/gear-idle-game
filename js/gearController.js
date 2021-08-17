@@ -15,8 +15,8 @@ function gearGeneration()
     {
         if(i != 0 && gears.state[i] == 1)
         {
-            gears.progress[i] += (gears.progressPerMinuteBase * gears.progressPerMinuteMultiplier) / (60 * globalConstant.gameTicksPerSecond * gears[i].max)
-            totalRatio += gears[i].max
+            gears.progress[i] += (gears.progressPerMinuteBase * gears.progressPerMinuteMultiplier) / (60 * globalConstant.gameTicksPerSecond * gears.max[i])
+            totalRatio += gears.max[i]
         }
         if(gears.progress[i] >= gears.max[i])
         {
