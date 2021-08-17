@@ -1,6 +1,3 @@
-import "./gearController.mjs"
-import "../libraries/BigNumber"
-
 export function updateVisual()
 {
 	switch(globalDisplays.currentScreen)
