@@ -1,4 +1,6 @@
-var gears = {
+import "../libraries/BigNumber"
+
+export var gears = {
 	progress: [new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0')],
 	max: [new BigNumber('30.0'), new BigNumber('4.0'), new BigNumber('6.0'), new BigNumber('8.0'), new BigNumber('12.0')],
 	state: [1, 0, 0, 0, 0],
@@ -7,7 +9,7 @@ var gears = {
 	progressPerMinuteMultiplier: new BigNumber('1.0')
 };
 
-function gearGeneration() 
+export function gearGeneration() 
 {
     var totalRatio = new BigNumber('1.0')
     for(i = 0; i < 5; i++)
