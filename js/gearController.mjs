@@ -12,6 +12,7 @@ export var gears = {
 
 export function gearGeneration()
 {
+    console.log("Hey")
     let totalRatio = new BigNumber('1.0')
     for(let i = 0; i < 5; i++)
     {
