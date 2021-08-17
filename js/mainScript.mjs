@@ -1,3 +1,5 @@
+import "./gearController.js"
+
 export var globalDisplays = {
 	currentScreen: 0
 };
