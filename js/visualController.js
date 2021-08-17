@@ -8,10 +8,8 @@ function updateVisual()
 			if(gears.state[i] == 1)
 			{
                 document.getElementById("gear" + (i+1) + "Number").innerHTML = Math.floor(gears.progress[i])
-                document.getElementById("gear" + (i+1) + "Max").innerHTML = Math.floor(gears.progress[i])
+                document.getElementById("gear" + (i+1) + "Max").innerHTML = "Max " + Math.floor(gears.max[i])
                 document.getElementById("gear" + (i+1) + "Progress").style.width = (gears.progress[i] / gears.max[i] * 100) + "%"
-                console.log(i)
-                console.log(i+1)
 				document.getElementById("gear" + (i+1) + "Box").style.display = "block"
 			}
 			else
