@@ -1,4 +1,4 @@
-const BigNumber = require("../libraries/bignumber");
+import "../libraries/bignumber";
 
 var gears = {
 	progress: [new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0')],
