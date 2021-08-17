@@ -1,4 +1,4 @@
-import { globalDisplays } from "./mainScript.mjs"
+import { globalDisplays, metaData } from "./mainScript.mjs"
 import { gears } from "./gearController.mjs"
 
 export function updateVisual()
