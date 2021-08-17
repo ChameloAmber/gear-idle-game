@@ -3,7 +3,7 @@ export function updateVisual()
 	switch(globalDisplays.currentScreen)
 	{
 		case 0: 
-		for(i = 0; i < 5; i++)
+		for(let i = 0; i < 5; i++)
 		{
 			if(gears.state[i] == 1)
 			{
