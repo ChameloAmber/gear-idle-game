@@ -22,7 +22,7 @@ export function gearGeneration()
             if(gears.progress[i].isGreaterThanOrEqualTo(gears.max[i]))
             {
                 gears.progress[i] = new BigNumber('0.0')
-                gear.coin[i] = gears.coin[i].plus(1)
+                gears.coin[i] = gears.coin[i].plus(1)
                 if(i != 4) {gears.state[i + 1] = 1}
             }
         }

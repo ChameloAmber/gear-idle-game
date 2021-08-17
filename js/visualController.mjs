@@ -10,9 +10,9 @@ export function updateVisual()
 		{
 			if(gears.state[i] == 1)
 			{
-                document.getElementById("gear" + (i+1) + "Number").innerHTML = gears.progress[i].toPrecision(2)
+                document.getElementById("gear" + (i+1) + "Number").innerHTML = gears.progress[i].toFixed(2)
                 document.getElementById("gear" + (i+1) + "Max").innerHTML = "Max " + gears.max[i].toString()
-                document.getElementById("gear" + (i+1) + "Progress").style.width = gears.progress[i].dividedBy(gears.max[i]).multipliedBy(100).toPrecision(4) + "%"
+                document.getElementById("gear" + (i+1) + "Progress").style.width = gears.progress[i].dividedBy(gears.max[i]).multipliedBy(100).toFixed(2) + "%"
 				document.getElementById("gear" + (i+1) + "Box").style.display = "block"
 			}
 			else
