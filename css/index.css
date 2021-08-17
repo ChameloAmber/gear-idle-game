@@ -48,13 +48,14 @@ body
 	line-height: 32px;
 	display: inherit;
 	border: 1px solid white;
+	color: inherit;
 }
 
 .gearProgressBar
 {
 	position: relative;
 	left: 2%;
-	top: 44px;
+	top: 4px;
 	width: 96%;
 	height: 32px;
 	background-color: #003d00;
@@ -73,13 +74,13 @@ body
 
 .gearNumber
 {
-	width: 35%;
-	height: 40%;
+	position: relative;
+	top: 4px;
+	width: 30%;
+	height: 36px;
 	left: 1%;
 	float: left;
-	bottom: -10%;
 	text-align: left;
-	position: relative;
 	padding-left: 1%;
 	display: inherit;
 	color: inherit;
@@ -87,14 +88,27 @@ body
 	font-size: 2.5vh;
 }
 
-.gearMax
+.gearEnergy
 {
-	width: 39%;
-	height: 40%;
+	position: relative;
+	top: 4px;
+	width: 40%;
+	height: 36px;
+	float: left;
+	text-align: center;
+	display: inherit;
+	color: inherit;
+	line-height: 32px;
+	font-size: 2.5vh;
+}
+
+.gearRatio
+{
+	width: 30%;
+	height: 36px;
 	float: left;	
 	text-align: right;
 	position: relative;
-	bottom: -10%;
 	padding-right: 1%;
 	display: inherit;
 	color: inherit;
