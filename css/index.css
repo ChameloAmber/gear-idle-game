@@ -23,7 +23,7 @@ body
 {
 	position: relative;
 	width: 100%;
-	height: 80px;
+	height: 120px;
 	background-color: inherit;
 	float: left;
 	display: inherit;
@@ -33,10 +33,10 @@ body
 .gearName
 {
 	position: relative;
-	width: 20%;
-	height: 80%;
+	width: 96%;
+	height: 10%;
 	top: 10%;
-	left: 1%;
+	left: 2%;
 	background-color: inherit;
 	font-size: 16px;
 	text-align: center;
