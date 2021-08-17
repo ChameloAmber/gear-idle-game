@@ -12,7 +12,6 @@ export var gears = {
 
 export function gearGeneration()
 {
-    console.log("Hey")
     let totalRatio = new BigNumber('1.0')
     for(let i = 0; i < 5; i++)
     {
@@ -20,6 +19,7 @@ export function gearGeneration()
         {
             gears.progress[i].plus(gears.progressPerMinuteBase.multipliedBy(gears.progressPerMinuteMultiplier).dividedBy(new BigNumber(globalConstant.gameTicksPerSecond).multipliedBy(60).multipliedBy(totalRatio)))
             totalRatio.multipliedBy(gears.max[i])
+            console.log(gears.progress[i].ToFixed() + " " + totalRatio.ToFixed())
             if(gears.progress[i].isGreaterThanOrEqualTo(gears.max[i]))
             {
                 gears.progress[i] = new BigNumber('0.0')
