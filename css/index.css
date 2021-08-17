@@ -3,10 +3,26 @@ body
 	background-color: black;
 }
 
+.leftPanel
+{
+	width: 12%;
+	height: 100%;
+	float: left;
+	background-color: #242b36;
+}
+
+.mainPanel
+{
+	width: 88%;
+	height: 100%;
+	float: left;
+	background-color: #051226;
+}
+
 .gearBox
 {
 	position: relative;
-	width: 50%;
+	width: 100%;
 	height: 80px;
 	background-color: inherit;
 	float: left;
