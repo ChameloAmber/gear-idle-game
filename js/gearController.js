@@ -9,21 +9,20 @@ var gears = {
 
 function gearGeneration() 
 {
-    gears.progress[0] += (gears.progressPerMinuteBase * gears.progressPerMinuteMultiplier) / (60 * globalConstant.gameTicksPerSecond)
-    var totalRatio = 0
+    var totalRatio = 1
     for(i = 0; i < 5; i++)
     {
-        if(i != 0 && gears.state[i] == 1)
+        if(gears.state[i] == 1)
         {
-            gears.progress[i] += (gears.progressPerMinuteBase * gears.progressPerMinuteMultiplier) / (60 * globalConstant.gameTicksPerSecond * gears.max[i])
-            totalRatio += gears.max[i]
+            gears.progress[i] += (gears.progressPerMinuteBase * gears.progressPerMinuteMultiplier) / (60 * globalConstant.gameTicksPerSecond * totalRatio)
+            totalRatio *= gears.max[i]
         }
-        if(gears.progress[i] >= gears.max[i])
-        {
-            gears.progress[i] = 0
-            gears.coin[i] += 1
-            if(i != 4) {gears.state[i + 1] = 1}
-        }
+    }
+    if(gears.progress[i] >= gears.max[i])
+    {
+        gears.progress[i] = 0
+        gears.coin[i] += 1
+        if(i != 4) {gears.state[i + 1] = 1}
     }
 }
 
