@@ -1,7 +1,3 @@
-const BigNumber = require("../libraries/bignumber");
-
-BigNumber.config({DECIMAL_PLACES: 2})
-
 var globalDisplays = {
 	currentScreen: 0
 };
@@ -12,7 +8,7 @@ var globalConstant = {
 };
 
 var metaData = {
-    build: "4.1"
+    build: "4.2"
 }
 
 var gameTicker = setInterval(gearGeneration, 1000 / globalConstant.gameTicksPerSecond)
