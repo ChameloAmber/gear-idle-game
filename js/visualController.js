@@ -1,4 +1,6 @@
-function updateVisual()
+
+
+export function updateVisual()
 {
 	switch(globalDisplays.currentScreen)
 	{
