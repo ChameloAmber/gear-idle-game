@@ -1,4 +1,5 @@
 import BigNumber from "../libraries/bignumber.mjs"
+import { globalConstant } from "./mainScript.mjs";
 
 export var gears = {
 	progress: [new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0')],

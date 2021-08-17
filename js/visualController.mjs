@@ -1,3 +1,6 @@
+import { globalDisplays } from "./mainScript.mjs"
+import { gears } from "./gearController.mjs"
+
 export function updateVisual()
 {
 	switch(globalDisplays.currentScreen)
