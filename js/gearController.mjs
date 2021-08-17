@@ -31,3 +31,4 @@ module.export = {
     }
 }
 
+export default GearController
