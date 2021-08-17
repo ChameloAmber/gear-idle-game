@@ -17,13 +17,12 @@ export function gearGeneration()
     {
         if(gears.state[i] == 1)
         {
-            gears.progress[i].plus(gears.progressPerMinuteBase.multipliedBy(gears.progressPerMinuteMultiplier).dividedBy(new BigNumber(globalConstant.gameTicksPerSecond).multipliedBy(60).multipliedBy(totalRatio)))
-            totalRatio.multipliedBy(gears.max[i])
-            console.log(gears.progress[i].toFixed() + " " + totalRatio.toFixed())
+            gears.progress[i] = gears.progress[i].plus(gears.progressPerMinuteBase.multipliedBy(gears.progressPerMinuteMultiplier).dividedBy(new BigNumber(globalConstant.gameTicksPerSecond).multipliedBy(60).multipliedBy(totalRatio)))
+            totalRatio = totalRatio.multipliedBy(gears.max[i])
             if(gears.progress[i].isGreaterThanOrEqualTo(gears.max[i]))
             {
                 gears.progress[i] = new BigNumber('0.0')
-                gears.coin[i].plus(1)
+                gear.coin[i] = gears.coin[i].plus(1)
                 if(i != 4) {gears.state[i + 1] = 1}
             }
         }
