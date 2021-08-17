@@ -9,26 +9,21 @@ export var gears = {
 	progressPerMinuteMultiplier: new BigNumber('1.0')
 };
 
-module.export = {
-    
-    gearGeneration: function()
+export function gearGeneration()
+{
+    var totalRatio = new BigNumber('1.0')
+    for(i = 0; i < 5; i++)
     {
-        var totalRatio = new BigNumber('1.0')
-        for(i = 0; i < 5; i++)
+        if(gears.state[i] == 1)
         {
-            if(gears.state[i] == 1)
+            gears.progress[i].plus(gears.progressPerMinuteBase.multipliedBy(gears.progressPerMinuteMultiplier).dividedBy(globalConstant.gameTicksPerSecond.multipliedBy(60).multipliedBy(totalRatio)))
+            totalRatio.multipliedBy(gears.max[i])
+            if(gears.progress[i].isGreaterThanOrEqualTo(gears.max[i]))
             {
-                gears.progress[i].plus(gears.progressPerMinuteBase.multipliedBy(gears.progressPerMinuteMultiplier).dividedBy(globalConstant.gameTicksPerSecond.multipliedBy(60).multipliedBy(totalRatio)))
-                totalRatio.multipliedBy(gears.max[i])
-                if(gears.progress[i].isGreaterThanOrEqualTo(gears.max[i]))
-                {
-                    gears.progress[i] = new BigNumber('0.0')
-                    gears.coin[i].plus(1)
-                    if(i != 4) {gears.state[i + 1] = 1}
-                }
+                gears.progress[i] = new BigNumber('0.0')
+                gears.coin[i].plus(1)
+                if(i != 4) {gears.state[i + 1] = 1}
             }
         }
     }
 }
-
-export default GearController

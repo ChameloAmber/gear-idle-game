@@ -10,6 +10,3 @@ export var globalConstant = {
 export var metaData = {
     build: "5"
 }
-
-export var gameTicker = setInterval(gearController.gearGeneration, 1000 / globalConstant.gameTicksPerSecond)
-export var visualTicker = setInterval(updateVisual, 1000 / globalConstant.visualTicksPerSecond);

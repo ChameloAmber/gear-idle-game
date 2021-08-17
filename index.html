@@ -40,8 +40,11 @@
 
 <script type="module">
     import BigNumber from "./libraries/bignumber.mjs"
-    import GearController from "./js/gearController.mjs"
 </script>
-
+<script type="module" src="./js/gearController.mjs"></script>
 <script type="module" src="./js/visualController.mjs"></script>
 <script type="module" src="./js/mainScript.mjs"></script>
+<script type="text/javascript">
+    var gameTicker = setInterval(gearGeneration, 1000 / globalConstant.gameTicksPerSecond)
+    var visualTicker = setInterval(updateVisual, 1000 / globalConstant.visualTicksPerSecond);
+</script>
