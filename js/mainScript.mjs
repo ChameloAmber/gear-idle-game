@@ -2,7 +2,8 @@ import { gearGeneration } from "./gearController.mjs"
 import { updateVisual } from "./visualController.mjs"
 
 export var globalDisplays = {
-	currentScreen: 0
+	currentScreen: 0,
+	currentScreenName: "Tower"
 };
 
 export var globalConstant = {
@@ -11,7 +12,7 @@ export var globalConstant = {
 };
 
 export var metaData = {
-    build: "7.13"
+    build: "8"
 }
 
 export var gameTicker = setInterval(gearGeneration, 1000 / globalConstant.gameTicksPerSecond)

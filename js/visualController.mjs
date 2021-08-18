@@ -25,6 +25,7 @@ export function updateVisual()
 	{
 		case 0: 
 			document.getElementById("screenTowerSwitcher").className = "screenSwitcher-selected"
+			document.getElementById("screenTower").style.display = "block"
 			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher"
 			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
 			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
@@ -56,5 +57,12 @@ export function updateVisual()
 
 export function switchScreen(screenNumber)
 {
-	globalDisplays.currentScreen = screenNumber
+	if(screenNumber != globalDisplays.currentScreen)
+	{
+		// Turn off current screen
+		document.getElementById("screen" + globalDisplays.currentScreenName).style.display = "none"
+		
+		globalDisplays.currentScreen = screenNumber
+		globalDisplays.currentScreenName = gears.unlockFeature[screenNumber]
+	}
 }
