@@ -11,7 +11,7 @@ export var globalConstant = {
 };
 
 export var metaData = {
-    build: "7.11"
+    build: "7.12"
 }
 
 export var gameTicker = setInterval(gearGeneration, 1000 / globalConstant.gameTicksPerSecond)
