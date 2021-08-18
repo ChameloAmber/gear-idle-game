@@ -11,6 +11,35 @@ body
 	background-color: #242b36;
 }
 
+.screenSwitcher
+{
+	position: relative;
+	float: left;
+	left: 2%;
+	width: 96%;
+	height: 48px;
+	border: 1px solid white;
+	border-radius: 4px;
+	background-color: blue;
+	font-size: 18px;
+	color: white;
+}
+
+.screenSwitcher-selected
+{
+	position: relative;
+	float: left;
+	left: 2%;
+	width: 96%;
+	height: 48px;
+	border: 1px solid white;
+	border-radius: 4px;
+	background-color: white;
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+
 .mainPanel
 {
 	width: 88%;
