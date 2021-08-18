@@ -28,6 +28,7 @@ body
 	border-radius: 4px;
 	background-color: inherit;
 	font-size: 18px;
+	line-height: 48px;
 	text-align: center;
 	vertical-align: middle;
 	color: #b3b3b3;
@@ -44,10 +45,11 @@ body
 	border-radius: 4px;
 	background-color: rgba(26, 129, 170, 0.534);
 	font-size: 18px;
+	line-height: 48px;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
-	color: black;
+	color: #b3b3b3;
 }
 
 .mainPanel
@@ -151,4 +153,9 @@ body
 	color: inherit;
 	line-height: 32px;
 	font-size: 2.5vh;
+}
+
+#buildNumber
+{
+	color: white;
 }

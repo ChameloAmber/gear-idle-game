@@ -5,10 +5,10 @@
 
 <div class="leftPanel">
     <div class="leftPanelBuffer"></div>
-    <div class="screenSwitcher-selected" id="screenTower">Tower</div>
-    <div class="screenSwitcher" id="screenLibrary">Library</div>
-    <div class="screenSwitcher" id="screenLab">Lab</div>
-    <div class="screenSwitcher" id="screenOffice">Office</div>
+    <div class="screenSwitcher-selected" id="screenTower" onClick="switchScreen(0)">Tower</div>
+    <div class="screenSwitcher" id="screenLibrary" onClick="switchScreen(1)">Library</div>
+    <div class="screenSwitcher" id="screenLab" onClick="switchScreen(2)">Lab</div>
+    <div class="screenSwitcher" id="screenOffice" onClick="switchScreen(3)">Office</div>
 </div>
 <div class="mainPanel">
     <div class="gearBox" id="gear1Box">
@@ -54,3 +54,6 @@
 <script type="module" src="./js/gearController.mjs"></script>
 <script type="module" src="./js/visualController.mjs"></script>
 <script type="module" src="./js/mainScript.mjs"></script>
+<script type="module">
+    import switchScreen from "./js/visualController.mjs"
+</script>
