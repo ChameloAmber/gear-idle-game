@@ -9,14 +9,14 @@ export function updateVisual()
 		{
 			if(gears.unlockFeature[i] != "")
 			{
-				document.getElementById("screen" + gears.unlockFeature[i]).style.display = "block"
+				document.getElementById("screen" + gears.unlockFeature[i] + "Switcher").style.display = "block"
 			}
 		}
 		else
 		{
 			if(gears.unlockFeature[i] != "")
 			{
-				document.getElementById("screen" + gears.unlockFeature[i]).style.display = "none"
+				document.getElementById("screen" + gears.unlockFeature[i] + "Switcher").style.display = "none"
 			}
 		}
 	}
@@ -24,10 +24,10 @@ export function updateVisual()
 	switch(globalDisplays.currentScreen)
 	{
 		case 0: 
-			document.getElementById("screenTower").className = "screenSwitcher-selected"
-			document.getElementById("screenLibrary").className = "screenSwitcher"
-			document.getElementById("screenLab").className = "screenSwitcher"
-			document.getElementById("screenOffice").className = "screenSwitcher"
+			document.getElementById("screenTowerSwitcher").className = "screenSwitcher-selected"
+			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher"
+			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
+			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
 			for(let i = 0; i < 5; i++)
 			{
 				if(gears.state[i] == 1)
@@ -45,10 +45,10 @@ export function updateVisual()
 			}
 			break;
 		case 1:
-			document.getElementById("screenTower").className = "screenSwitcher"
-			document.getElementById("screenLibrary").className = "screenSwitcher-selected"
-			document.getElementById("screenLab").className = "screenSwitcher"
-			document.getElementById("screenOffice").className = "screenSwitcher"
+			document.getElementById("screenTowerSwitcher").className = "screenSwitcher"
+			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher-selected"
+			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
+			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
 	}
 
     document.getElementById("buildNumber").innerHTML = metaData.build
