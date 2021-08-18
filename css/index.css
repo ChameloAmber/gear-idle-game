@@ -18,11 +18,13 @@ body
 	left: 2%;
 	width: 96%;
 	height: 48px;
-	border: 1px solid white;
+	border: 1px solid rgb(153, 0, 255);
 	border-radius: 4px;
-	background-color: blue;
+	background-color: inherit;
 	font-size: 18px;
-	color: white;
+	text-align: center;
+	vertical-align: middle;
+	color: #b3b3b3;
 }
 
 .screenSwitcher-selected
@@ -32,11 +34,13 @@ body
 	left: 2%;
 	width: 96%;
 	height: 48px;
-	border: 1px solid white;
+	border: 1px solid rgb(153, 0, 255);
 	border-radius: 4px;
-	background-color: white;
+	background-color: rgba(26, 129, 170, 0.534);
 	font-size: 18px;
 	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
 	color: black;
 }
 
