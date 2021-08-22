@@ -1,5 +1,5 @@
 import BigNumber from "../libraries/bignumber.mjs"
-import { globalConstant } from "./mainScript.mjs";
+import { globalConstant } from "./mainScript.mjs"
 
 export var gears = {
 	progress: [new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0'), new BigNumber('0.0')],
@@ -19,7 +19,7 @@ export function gearGeneration()
         if(gears.state[i] == 1)
         {
             totalRatio = totalRatio.multipliedBy(gears.ratio[i])
-            gears.progress[i] = gears.progress[i].plus(gears.progressPerMinuteBase.multipliedBy(gears.progressPerMinuteMultiplier).dividedBy(new BigNumber(globalConstant.gameTicksPerSecond).multipliedBy(60).multipliedBy(totalRatio)))
+            gears.progress[i] = gears.progress[i].plus(gears.progressPerMinuteBase.multipliedBy(gears.progressPerMinuteMultiplier).dividedBy(globalConstant.gameTicksPerSecond).multipliedBy(60).multipliedBy(totalRatio))
             if(gears.progress[i].isGreaterThanOrEqualTo(new BigNumber(1)))
             {
                 gears.progress[i] = new BigNumber('0.0')

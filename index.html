@@ -5,10 +5,10 @@
 
 <div class="leftPanel">
     <div class="leftPanelBuffer"></div>
-    <div class="screenSwitcher-selected" id="screenTowerSwitcher" onClick="switchScreen(0)">Tower</div>
-    <div class="screenSwitcher" id="screenLibrarySwitcher" onClick="switchScreen(1)">Library</div>
-    <div class="screenSwitcher" id="screenLabSwitcher" onClick="switchScreen(2)">Lab</div>
-    <div class="screenSwitcher" id="screenOfficeSwitcher" onClick="switchScreen(3)">Office</div>
+    <div class="screenSwitcher-selected" id="screenTowerSwitcher" onclick="switchScreen(0)">Tower</div>
+    <div class="screenSwitcher" id="screenLibrarySwitcher" onclick="switchScreen(1)">Library</div>
+    <div class="screenSwitcher" id="screenLabSwitcher" onclick="switchScreen(2)">Lab</div>
+    <div class="screenSwitcher" id="screenOfficeSwitcher" onclick="switchScreen(3)">Office</div>
 </div>
 <div class="mainPanel">
     <div class="screen" id="screenTower">
@@ -55,8 +55,8 @@
         <div>Decode Goal: </div><div if="libraryDecodeGoal">0</div><br>
         <div>Fetch Progress: </div><div if="libraryFetchProgress">0</div><br>
         <div>Fetch Goal: </div><div if="libraryFetchGoal">0</div><br>
-        <div class="button" id="fetchButton">Fetch</div><br>
-        <div class="button" id="decodeButton">Decode</div><br>
+        <div class="button" id="fetchButton" onclick="goFetchABook()">Fetch</div><br>
+        <div class="button" id="decodeButton" onclick="goDecodeABook()">Decode</div><br>
     </div>
     <div class="screenLab">This is the lab screen</div>
     <div class="screenOffice">This is the office screen</div>
@@ -70,5 +70,8 @@
 <script type="module" src="./js/mainScript.mjs"></script>
 <script type="module">
     import {switchScreen} from "./js/visualController.mjs"
+    import { goFetchABook, goDecodeABook } from "./js/libraryController.mjs"
     window.switchScreen = switchScreen
+    window.goFetchABook = goFetchABook
+    window.goDecodeABook = goDecodeABook
 </script>

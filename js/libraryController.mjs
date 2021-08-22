@@ -1,5 +1,5 @@
-import BigNumber from '../libraries/bignumber.mjs'
-import globalConstant from './mainScript.mjs'
+import BigNumber from "../libraries/bignumber.mjs"
+import { globalConstant } from "./mainScript.mjs"
 
 export var libraries = {
     decodeProgress: new BigNumber('0.0'),
