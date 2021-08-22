@@ -12,8 +12,12 @@ export var globalConstant = {
 };
 
 export var metaData = {
-    build: "8.2"
+    build: "9"
 }
 
-export var gameTicker = setInterval(gearGeneration, 1000 / globalConstant.gameTicksPerSecond)
+export var gameTicker = setInterval(gameUpdate, 1000 / globalConstant.gameTicksPerSecond)
 export var visualTicker = setInterval(updateVisual, 1000 / globalConstant.visualTicksPerSecond);
+
+function gameUpdate() {
+	gearGeneration()
+}
