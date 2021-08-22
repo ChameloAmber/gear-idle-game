@@ -30,7 +30,7 @@ export function libraryUpdate()
         }
     }
 
-    if(decodingState)
+    if(libraries.decodingState)
     {
         libraries.decodeProgress = libraries.decodeProgress.plus(libraries.decodeBase.plus(libraries.decodeModifier).multipliedBy(libraries.decodeMultiplier).dividedBy(globalConstant.gameTicksPerSecond))
         if(libraries.decodeProgress.isGreaterThanOrEqualTo(libraries.decodeGoal))
