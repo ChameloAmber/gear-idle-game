@@ -28,6 +28,7 @@ export function updateVisual()
 			document.getElementById("screenTowerSwitcher").className = "screenSwitcher-selected"
 			document.getElementById("screenTower").style.display = "block"
 			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher"
+			document.getElementById("screenLibrary").style.display = "none"
 			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
 			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
 			for(let i = 0; i < 5; i++)
@@ -48,7 +49,9 @@ export function updateVisual()
 			break;
 		case 1:
 			document.getElementById("screenTowerSwitcher").className = "screenSwitcher"
+			document.getElementById("screenTower").style.display = "none"
 			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher-selected"
+			document.getElementById("screenLibrary").style.display = "block"
 			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
 			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
 			document.getElementById("libraryBookDecoded").innerHTML = libraries.booksDecoded.toFixed(0)
