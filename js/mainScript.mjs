@@ -13,7 +13,7 @@ export var globalConstant = {
 };
 
 export var metaData = {
-    build: "10.4"
+    build: "10.5"
 }
 
 export var gameTicker = setInterval(gameUpdate, 1000 / globalConstant.gameTicksPerSecond)

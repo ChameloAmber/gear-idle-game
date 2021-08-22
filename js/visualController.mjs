@@ -30,7 +30,9 @@ export function updateVisual()
 			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher"
 			document.getElementById("screenLibrary").style.display = "none"
 			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
+			document.getElementById("screenLab").style.display = "none"
 			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
+			document.getElementById("screenOffice").style.display = "none"
 			for(let i = 0; i < 5; i++)
 			{
 				if(gears.state[i] == 1)
@@ -53,13 +55,35 @@ export function updateVisual()
 			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher-selected"
 			document.getElementById("screenLibrary").style.display = "block"
 			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
+			document.getElementById("screenLab").style.display = "none"
 			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
+			document.getElementById("screenOffice").style.display = "none"
 			document.getElementById("libraryBookDecoded").innerHTML = libraries.booksDecoded.toFixed(0)
 			document.getElementById("libraryState").innerHTML = libraries.state
 			document.getElementById("libraryDecodeProgress").innerHTML = libraries.decodeProgress.toFixed(2)
 			document.getElementById("libraryDecodeGoal").innerHTML = libraries.decodeGoal.toFixed(2)
 			document.getElementById("libraryFetchProgress").innerHTML = libraries.fetchProgress.toFixed(2)
 			document.getElementById("libraryFetchGoal").innerHTML = libraries.fetchGoal.toFixed(2)
+			break;
+		case 2: 
+			document.getElementById("screenTowerSwitcher").className = "screenSwitcher"
+			document.getElementById("screenTower").style.display = "none"
+			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher"
+			document.getElementById("screenLibrary").style.display = "none"
+			document.getElementById("screenLabSwitcher").className = "screenSwitcher-selected"
+			document.getElementById("screenLab").style.display = "block"
+			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
+			document.getElementById("screenOffice").style.display = "none"
+			break;
+		case 3:
+			document.getElementById("screenTowerSwitcher").className = "screenSwitcher"
+			document.getElementById("screenTower").style.display = "none"
+			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher"
+			document.getElementById("screenLibrary").style.display = "none"
+			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
+			document.getElementById("screenLab").style.display = "none"
+			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher-selected"
+			document.getElementById("screenOffice").style.display = "block"
 	}
 
     document.getElementById("buildNumber").innerHTML = metaData.build
