@@ -1,4 +1,5 @@
 import { gearGeneration } from "./gearController.mjs"
+import { libraryUpdate } from "./libraryController.mjs"
 import { updateVisual } from "./visualController.mjs"
 
 export var globalDisplays = {
@@ -12,7 +13,7 @@ export var globalConstant = {
 };
 
 export var metaData = {
-    build: "9"
+    build: "10"
 }
 
 export var gameTicker = setInterval(gameUpdate, 1000 / globalConstant.gameTicksPerSecond)
@@ -20,4 +21,5 @@ export var visualTicker = setInterval(updateVisual, 1000 / globalConstant.visual
 
 function gameUpdate() {
 	gearGeneration()
+	libraryUpdate()
 }

@@ -1,6 +1,7 @@
 body
 {
 	background-color: black;
+	color: #b3b3b3;
 }
 
 .leftPanel
@@ -17,6 +18,11 @@ body
 	height: 32px;
 }
 
+.screen
+{
+	color: inherit;
+}
+
 .screenSwitcher
 {
 	position: relative;
@@ -31,7 +37,7 @@ body
 	line-height: 48px;
 	text-align: center;
 	vertical-align: middle;
-	color: #b3b3b3;
+	color: inherit;
 }
 
 .screenSwitcher-selected
@@ -49,7 +55,7 @@ body
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
-	color: #b3b3b3;
+	color: inherit;
 }
 
 .mainPanel
@@ -58,6 +64,7 @@ body
 	height: 100%;
 	float: left;
 	background-color: #051226;
+	color: inherit;
 }
 
 .gearBox
@@ -153,6 +160,11 @@ body
 	color: inherit;
 	line-height: 32px;
 	font-size: 2.5vh;
+}
+
+.button
+{
+	border: 1px solid white;
 }
 
 #buildNumber

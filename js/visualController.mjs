@@ -1,5 +1,6 @@
 import { globalDisplays, metaData } from "./mainScript.mjs"
 import { gears } from "./gearController.mjs"
+import { libraries } from "./libraryController.mjs"
 
 export function updateVisual()
 {
@@ -50,6 +51,12 @@ export function updateVisual()
 			document.getElementById("screenLibrarySwitcher").className = "screenSwitcher-selected"
 			document.getElementById("screenLabSwitcher").className = "screenSwitcher"
 			document.getElementById("screenOfficeSwitcher").className = "screenSwitcher"
+			document.getElementById("libraryBookDecoded").innerHTML = libraries.booksDecoded.toFixed(0)
+			document.getElementById("libraryState").innerHTML = libraries.state
+			document.getElementById("libraryDecodeProgress").innerHTML = libraries.decodeProgress.toFixed(2)
+			document.getElementById("libraryDecodeGoal").innerHTML = libraries.decodeGoal.toFixed(2)
+			document.getElementById("libraryFetchProgress").innerHTML = libraries.fetchProgress.toFixed(2)
+			document.getElementById("libraryFetchGoal").innerHTML = libraries.fetchGoal.toFixed(2)
 	}
 
     document.getElementById("buildNumber").innerHTML = metaData.build
