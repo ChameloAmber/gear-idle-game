@@ -1,77 +1,108 @@
 <head>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="modules/globals/globalStyles.css">
+    <link rel="stylesheet" href="modules/gears/gearStyles.css">
 </head>
-<body>
+<body onload="startUp()" style="background-color: black;">
 
-<div class="leftPanel">
-    <div class="leftPanelBuffer"></div>
-    <div class="screenSwitcher-selected" id="screenTowerSwitcher" onclick="switchScreen(0)">Tower</div>
-    <div class="screenSwitcher" id="screenLibrarySwitcher" onclick="switchScreen(1)">Library</div>
-    <div class="screenSwitcher" id="screenLabSwitcher" onclick="switchScreen(2)">Lab</div>
-    <div class="screenSwitcher" id="screenOfficeSwitcher" onclick="switchScreen(3)">Office</div>
+<div id="leftScreen">
+    <button class="moduleButton" onClick="SwitchScreen('Gear')">Gear</button>
+    <button class="moduleButton" onClick="SwitchScreen('Reserve')">Reserve</button>
 </div>
-<div class="mainPanel">
-    <div class="screen" id="screenTower">
-        <div class="gearBox" id="gear1Box">
-            <div class="gearName" id="gear1Name">GEAR 1</div>
-            <div class="gearProgressBar" id="gear1Bar"><div class="gearProgress" id="gear1Progress"></div></div>
-            <div class="gearNumber" id="gear1Number">0</div>
+<div id="mainScreen">
+    <div id="gearScreen">
+        <div class="gearBox" id="gearBox0">
+            <div class="gearHeader">GEAR 1</div>
+            <div class="gearRatio" id="gear0Ratio">1:20</div>
+            <div class="gearProgress" id="gear0Progress"></div>
+            <div class="gearPercent" id="gear0Percent">0.00000000</div>
+            <div class="gearEnergy" id="gear0Energy">0</div>
+            <button class="gearButtonReset" id="gear0ButtonReset" onclick="gearReset(0)">Reset</button>
+        </div>
+        <div class="gearBox" id="gearBox1">
+            <div class="gearHeader">GEAR 2</div>
+            <div class="gearRatio" id="gear1Ratio">1:20</div>
+            <div class="gearProgress" id="gear1Progress"></div>
+            <div class="gearPercent" id="gear1Percent">0.00000000</div>
             <div class="gearEnergy" id="gear1Energy">0</div>
-            <div class="gearRatio" id="gear1Ratio">60</div>
+            <button class="gearButtonReset" id="gear1ButtonReset" onclick="gearReset(1)">Reset</button>
         </div>
-        <div class="gearBox" id="gear2Box">
-            <div class="gearName" id="gear2Name">GEAR 2</div>
-            <div class="gearProgressBar" id="gear2Bar"><div class="gearProgress" id="gear2Progress"></div></div>
-            <div class="gearNumber" id="gear2Number">0</div>
+        <div class="gearBox" id="gearBox2">
+            <div class="gearHeader">GEAR 3</div>
+            <div class="gearRatio" id="gear2Ratio">1:20</div>
+            <div class="gearProgress" id="gear2Progress"></div>
+            <div class="gearPercent" id="gear2Percent">0.00000000</div>
             <div class="gearEnergy" id="gear2Energy">0</div>
-            <div class="gearRatio" id="gear2Ratio">60</div>
+            <button class="gearButtonReset" id="gear2ButtonReset" onclick="gearReset(2)">Reset</button>
         </div>
-        <div class="gearBox" id="gear3Box">
-            <div class="gearName" id="gear3Name">GEAR 3</div>
-            <div class="gearProgressBar" id="gear3Bar"><div class="gearProgress" id="gear3Progress"></div></div>
-            <div class="gearNumber" id="gear3Number">0</div>
+        <div class="gearBox" id="gearBox3">
+            <div class="gearHeader">GEAR 4</div>
+            <div class="gearRatio" id="gear3Ratio">1:20</div>
+            <div class="gearProgress" id="gear3Progress"></div>
+            <div class="gearPercent" id="gear3Percent">0.00000000</div>
             <div class="gearEnergy" id="gear3Energy">0</div>
-            <div class="gearRatio" id="gear3Ratio">60</div>
+            <button class="gearButtonReset" id="gear3ButtonReset" onclick="gearReset(3)">Reset</button>
         </div>
-        <div class="gearBox" id="gear4Box">
-            <div class="gearName" id="gear4Name">GEAR 4</div>
-            <div class="gearProgressBar" id="gear4Bar"><div class="gearProgress" id="gear4Progress"></div></div>
-            <div class="gearNumber" id="gear4Number">0</div>
+        <div class="gearBox" id="gearBox4">
+            <div class="gearHeader">GEAR 5</div>
+            <div class="gearRatio" id="gear4Ratio">1:20</div>
+            <div class="gearProgress" id="gear4Progress"></div>
+            <div class="gearPercent" id="gear4Percent">0.00000000</div>
             <div class="gearEnergy" id="gear4Energy">0</div>
-            <div class="gearRatio" id="gear4Ratio">60</div>
+            <button class="gearButtonReset" id="gear4ButtonReset" onclick="gearReset(4)">Reset</button>
         </div>
-        <div class="gearBox" id="gear5Box">
-            <div class="gearName" id="gear5Name">GEAR 5</div>
-            <div class="gearProgressBar" id="gear5Bar"><div class="gearProgress" id="gear5Progress"></div></div>
-            <div class="gearNumber" id="gear5Number">0</div>
+        <div class="gearBox" id="gearBox5">
+            <div class="gearHeader">GEAR 6</div>
+            <div class="gearRatio" id="gear5Ratio">1:20</div>
+            <div class="gearProgress" id="gear5Progress"></div>
+            <div class="gearPercent" id="gear5Percent">0.00000000</div>
             <div class="gearEnergy" id="gear5Energy">0</div>
-            <div class="gearRatio" id="gear5Ratio">60</div>
+            <button class="gearButtonReset" id="gear5ButtonReset" onclick="gearReset(5)">Reset</button>
+        </div>
+        <div class="gearBox" id="gearBox6">
+            <div class="gearHeader">GEAR 7</div>
+            <div class="gearRatio" id="gear6Ratio">1:20</div>
+            <div class="gearProgress" id="gear6Progress"></div>
+            <div class="gearPercent" id="gear6Percent">0.00000000</div>
+            <div class="gearEnergy" id="gear6Energy">0</div>
+            <button class="gearButtonReset" id="gear6ButtonReset" onclick="gearReset(6)">Reset</button>
+        </div>
+        <div class="gearBox" id="gearBox7">
+            <div class="gearHeader">GEAR 8</div>
+            <div class="gearRatio" id="gear7Ratio">1:20</div>
+            <div class="gearProgress" id="gear7Progress"></div>
+            <div class="gearPercent" id="gear7Percent">0.00000000</div>
+            <div class="gearEnergy" id="gear7Energy">0</div>
+            <button class="gearButtonReset" id="gear7ButtonReset" onclick="gearReset(7)">Reset</button>
+        </div>
+        <div class="gearBox" id="gearBox8">
+            <div class="gearHeader">GEAR 9</div>
+            <div class="gearRatio" id="gear8Ratio">1:20</div>
+            <div class="gearProgress" id="gear8Progress"></div>
+            <div class="gearPercent" id="gear8Percent">0.00000000</div>
+            <div class="gearEnergy" id="gear8Energy">0</div>
+            <button class="gearButtonReset" id="gear8ButtonReset" onclick="gearReset(8)">Reset</button>
+        </div>
+        <div class="gearBox" id="gearBox9">
+            <div class="gearHeader">GEAR 10</div>
+            <div class="gearRatio" id="gear9Ratio">1:20</div>
+            <div class="gearProgress" id="gear9Progress"></div>
+            <div class="gearPercent" id="gear9Percent">0.00000000</div>
+            <div class="gearEnergy" id="gear9Energy">0</div>
+            <button class="gearButtonReset" id="gear9ButtonReset" onclick="gearReset(9)">Reset</button>
         </div>
     </div>
-    <div class="screen" id="screenLibrary">
-        <div>Book decoded: </div><div id="libraryBookDecoded">0</div><br>
-        <div>State: </div><div id="libraryState">null</div><br>
-        <div>Decode Progress: </div><div id="libraryDecodeProgress">0</div><br>
-        <div>Decode Goal: </div><div id="libraryDecodeGoal">0</div><br>
-        <div>Fetch Progress: </div><div id="libraryFetchProgress">0</div><br>
-        <div>Fetch Goal: </div><div id="libraryFetchGoal">0</div><br>
-        <div class="button" id="fetchButton" onclick="goFetchABook()">Fetch</div><br>
-        <div class="button" id="decodeButton" onclick="goDecodeABook()">Decode</div><br>
-    </div>
-    <div class="screen" id="screenLab">This is the lab screen</div>
-    <div class="screen" id="screenOffice">This is the office screen</div>
-    <div id="buildNumber">0</div>
 </div>
 
 </body>
+<script src="libraries/bignumber.js"></script>
 
-<script type="module" src="./js/gearController.mjs"></script>
-<script type="module" src="./js/visualController.mjs"></script>
-<script type="module" src="./js/mainScript.mjs"></script>
-<script type="module">
-    import {switchScreen} from "./js/visualController.mjs"
-    import { goFetchABook, goDecodeABook } from "./js/libraryController.mjs"
-    window.switchScreen = switchScreen
-    window.goFetchABook = goFetchABook
-    window.goDecodeABook = goDecodeABook
+<script src="modules/globals/globalVariables.js"></script>
+<script src="modules/globals/globalVisualController.js"></script>
+
+<script src="modules/gears/gearVariables.js"></script>
+<script src="modules/gears/gearController.js"></script>
+
+<script>
+    window.setInterval(tick, 50);
+    window.setInterval(Update, 50);
 </script>

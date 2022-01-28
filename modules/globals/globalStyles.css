@@ -1,0 +1,14 @@
+#leftScreen {
+    height: 100%;
+    width: 15%;
+    border-right: 1px solid white;
+    float: left;
+}
+
+#mainScreen {
+    height: 100%;
+    width: 84%;
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

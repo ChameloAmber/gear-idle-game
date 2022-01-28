@@ -1,0 +1,83 @@
+.gearBox {
+    position: relative;
+    background-color: #bbbbbb;
+    height: 80px;
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 14px;
+    margin-bottom: 28px;
+    border: 2px solid green;
+    border-radius: 4px;
+    box-shadow: 0 0 12px 6px greenyellow;
+    display: none;
+}
+
+#gearBox0 {
+    display: block;
+}
+#gearBox1 {
+    display: block;
+}
+#gearBox2 {
+    display: block;
+}
+
+.gearHeader {
+    position: absolute;
+    left: 1%;
+    top: 8px;
+    font-size: 22px;
+}
+
+.gearPercent {
+    position: absolute;
+    color: white;
+    bottom: 8px;
+    left: 1%;
+    height: 32px;
+    width: 84%;
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+}
+
+.gearProgress {
+    position: absolute;
+    bottom: 8px;
+    left: 1%;
+    height: 32px;
+    margin-bottom: 1px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: blue;
+}
+
+.gearEnergy {
+    position: absolute;
+    border: 1px solid black;
+    bottom: 8px;
+    right: 7%;
+    width: 8%;
+    height: 64px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 64px;
+}
+
+.gearRatio {
+    position: absolute;
+    top: 14px;
+    left: 75%;
+    font-size: 20px;
+}
+
+.gearButtonReset {
+    position: absolute;
+    bottom: 8px;
+    right: 1%;
+    width: 5%;
+    height: 36px;
+}
