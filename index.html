@@ -1,11 +1,12 @@
 <head>
     <link rel="stylesheet" href="modules/globals/globalStyles.css">
     <link rel="stylesheet" href="modules/gears/gearStyles.css">
+    <link rel="stylesheet" href="modules/reserves/reserveStyles.css">
 </head>
-<body onload="startUp()" style="background-color: black;">
+<body onload="StartUp()" style="background-color: black;">
 
 <div id="topScreen">
-
+    
 </div>
 <div id="topDivider"></div>
 <div id="leftScreen">
@@ -175,18 +176,28 @@
             <div class="gearEnergy" id="gear19Energy">0</div>
         </div>
     </div>
+    <div id="reserveScreen">
+        <button id="reserveDeposit" onClick="ReserveToggleDeposit()">Deposit: Off</button>
+        <button id="reserveWithdraw" onCLick="ReserveToggleWithdraw()">Withdraw: Off</button>
+        <div id="reserveCurrent">0</div>
+        <div id="reserveMax">0</div>
+    </div>
 </div>
 
 </body>
 <script src="libraries/bignumber.js"></script>
 
 <script src="modules/globals/globalVariables.js"></script>
+<script src="modules/globals/globalController.js"></script>
 <script src="modules/globals/globalVisualController.js"></script>
 
 <script src="modules/gears/gearVariables.js"></script>
 <script src="modules/gears/gearController.js"></script>
 
+<script src="modules/reserves/reserveVariables.js"></script>
+<script src="modules/reserves/reserveController.js"></script>
+
 <script>
-    window.setInterval(tick, 50);
-    window.setInterval(Update, 50);
+    window.setInterval(TickUpdate, 100);
+    window.setInterval(VisualUpdate, 100);
 </script>

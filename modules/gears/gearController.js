@@ -1,32 +1,5 @@
-function startUp() {
-
-    BigNumber.set({DECIMAL_PLACES:200})
-    BigNumber.set({EXPONENTIAL_AT:1e+9})
-
-    gears.push(new Gear(BigNumber(0), BigNumber(60), BigNumber(0))); // Floor 1
-    gears.push(new Gear(BigNumber(0), BigNumber(5), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(6), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(7), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(8), BigNumber(0))); // Floor 5
-    gears.push(new Gear(BigNumber(0), BigNumber(16), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(23), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(33), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(46), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(64), BigNumber(0))); // Floor 10
-    gears.push(new Gear(BigNumber(0), BigNumber(128), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(206), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(330), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(520), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(820), BigNumber(0))); // Floor 15
-    gears.push(new Gear(BigNumber(0), BigNumber(1640), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(2950), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(5300), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(9500), BigNumber(0)));
-    gears.push(new Gear(BigNumber(0), BigNumber(17500), BigNumber(0))); // Floor 20
-}
-
-function tick() {
-    let tk = BigNumber(0.05);
+function GearTick() {
+    let tk = BigNumber(1).minus(gearReserveReduction).dividedBy(ticksPerSecond);
     for (i = 0; i < gears.length; i++) {
         tk = tk.dividedBy(gears[i].ratio.toNumber());
         gears[i].current = gears[i].current.plus(tk);
@@ -66,7 +39,7 @@ function tick() {
     }
 }
 
-function GearUpdate() {
+function GearVisualUpdate() {
     for(i = 0; i < gears.length; i++) {
         document.getElementById("gear" + i + "Ratio").innerHTML = "1:" + gears[i].ratio.toFixed(0);
         let deci = 4;

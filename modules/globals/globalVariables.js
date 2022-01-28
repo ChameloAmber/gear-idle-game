@@ -1,4 +1,6 @@
 var currentScreen = "Gear";
 
-var gearAmountBase = 1;
-var gearReserveReduction = 0;
+var gearAmountBase = BigNumber(1);
+var gearReserveReduction = BigNumber(0);
+
+var ticksPerSecond = BigNumber(10);

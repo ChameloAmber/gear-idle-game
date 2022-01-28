@@ -1,6 +1,7 @@
-function Update() {
+function VisualUpdate() {
     switch(currentScreen){
-        case "Gear": GearUpdate(); break;
+        case "Gear": GearVisualUpdate(); break;
+        case "Reserve": ReserveVisualUpdate(); break;
     }
 }
 
@@ -11,12 +12,12 @@ function SwitchScreen(newScreen) {
 
     switch(currentScreen){
         case "Gear": GearCloseScreen(); break;
-        case "Reserve": break;
+        case "Reserve": ReserveCloseScreen(); break;
     }
 
     currentScreen = newScreen;
     switch(newScreen){
         case "Gear": GearOpenScreen(); break;
-        case "Reserve": break;
+        case "Reserve": ReserveOpenScreen(); break;
     }
 }
