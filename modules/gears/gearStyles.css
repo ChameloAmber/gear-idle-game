@@ -1,15 +1,22 @@
 .gearBox {
     position: relative;
-    background-color: #bbbbbb;
-    height: 80px;
+    background-color: #0F2943;
+    color: #DDDDDD;
+    height: 96px;
     width: 98%;
     margin-left: 1%;
-    margin-top: 14px;
-    margin-bottom: 28px;
-    border: 2px solid green;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #1789FC;
     border-radius: 4px;
-    box-shadow: 0 0 12px 6px greenyellow;
-    display: none;
+    box-shadow: 0 0 16px 4px #1789FC;
+    display: block;
+}
+
+.gearBoxDivider {
+    position: relative;
+    width: 98%;
+    height: 4px;
 }
 
 #gearBox0 {
@@ -24,43 +31,42 @@
 
 .gearHeader {
     position: absolute;
-    left: 1%;
-    top: 8px;
-    font-size: 22px;
+    left: 2%;
+    bottom: 48px;
+    font-size: 28px;
 }
 
 .gearPercent {
     position: absolute;
-    color: white;
-    bottom: 8px;
-    left: 1%;
-    height: 32px;
-    width: 84%;
-    border: 2px solid black;
-    border-radius: 6px;
+    color: inherit;
+    bottom: 12px;
+    left: 2%;
+    height: 24px;
+    width: 87.5%;
+    border: 2px solid #EC6725;
     text-align: center;
-    line-height: 32px;
+    line-height: 24px;
     font-size: 20px;
 }
 
 .gearProgress {
     position: absolute;
-    bottom: 8px;
-    left: 1%;
-    height: 32px;
+    bottom: 12px;
+    left: 2%;
+    height: 24px;
     margin-bottom: 1px;
     border: 1px solid black;
-    border-radius: 6px;
-    background-color: blue;
+    background-color: #7E1811;
 }
 
 .gearEnergy {
     position: absolute;
-    border: 1px solid black;
-    bottom: 8px;
-    right: 7%;
+    background-color: inherit;
+    border: 2px solid #EC6725;
+    bottom: 12px;
+    right: 2%;
     width: 8%;
-    height: 64px;
+    height: 62px;
     font-size: 32px;
     font-weight: 600;
     text-align: center;
@@ -69,15 +75,8 @@
 
 .gearRatio {
     position: absolute;
-    top: 14px;
-    left: 75%;
-    font-size: 20px;
-}
-
-.gearButtonReset {
-    position: absolute;
-    bottom: 8px;
-    right: 1%;
-    width: 5%;
-    height: 36px;
+    bottom: 48px;
+    right: 12%;
+    font-size: 22px;
+    text-align: right;
 }
