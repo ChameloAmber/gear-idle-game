@@ -6,7 +6,7 @@
 <body onload="StartUp()" style="background-color: black;">
 
 <div id="topScreen">
-    
+    <div id="TPScounter">0</div>
 </div>
 <div id="topDivider"></div>
 <div id="leftScreen">
@@ -198,6 +198,6 @@
 <script src="modules/reserves/reserveController.js"></script>
 
 <script>
-    window.setInterval(TickUpdate, 100);
-    window.setInterval(VisualUpdate, 100);
+    window.setInterval(TickUpdate, 50);
+    window.setInterval(VisualUpdate, 50);
 </script>

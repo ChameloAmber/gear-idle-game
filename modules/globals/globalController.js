@@ -35,6 +35,12 @@ function StartUp() {
 }
 
 function TickUpdate() {
+
+    thisTick = Date.now();
+    TPScounter = 1000 / (thisTick - prevTick);
+    prevTick = thisTick;
+    document.getElementById("TPScounter").innerHTML = TPScounter;
+
     GearTick();
     if(reserve.active) {ReserveTick();}
 }
