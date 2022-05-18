@@ -6,7 +6,7 @@ function Update() {
 
     total = BigNumber(1)
     for(i = 0; i < 5; i++) {
-        gearsCurrent[i] += 1 / 20
+        gearsCurrent[i] += 1
         total = total.multipliedBy(gearsRatio[i])
         if (total.isLessThanOrEqualTo(gearsCurrent[i])) {
             gearsEnergy[i]++
